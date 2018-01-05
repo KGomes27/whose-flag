@@ -53,22 +53,14 @@
     </style>
     <app-header>
       <app-toolbar>
-        <div main-title>Whose flag is this?</div>
+        <div main-title="">Whose flag is this?</div>
       </app-toolbar>
     </app-header>
-    <iron-ajax
-      auto
-      url="data/countrycodes.json"
-      handle-as="json"
-      on-response="_handleResponse">
+    <iron-ajax auto="" url="data/countrycodes.json" handle-as="json" on-response="_handleResponse">
     </iron-ajax>
     <template is="dom-if" if="{{correctAnswer.code}}">
       <div id="flag-image-container">
-        <iron-image 
-          id="flag-image"
-          preload 
-          fade 
-          src="data/svg/[[correctAnswer.code]].svg">
+        <iron-image id="flag-image" preload="" fade="" src="data/svg/[[correctAnswer.code]].svg">
         </iron-image>
         <div id="answer-button-container">
           <paper-button class="answer" id="optionA" on-click="_selectAnswer">[[countryA.name]]</paper-button>
